@@ -9,8 +9,7 @@ function createGallery(){
     
     let markup = "";
     galleryItems.forEach(elem => {
-        markup += `<li class = "gallery__item gallery__image:hover"><a class = "gallery__link" href = ${elem.original}>
-        <img class = "gallery__image" src = ${elem.preview} data-source = ${elem.original} alt = ${elem.description}></a></li>`}
+        markup += `<li class="gallery__item"><a class="gallery__link" href="${elem.original}"><img class = "gallery__image" src="${elem.preview}" data-source="${elem.original}" alt="${elem.description}"></a></li>`}
     )
     gallery.insertAdjacentHTML('afterbegin', markup)
     // console.log(markup)
@@ -32,12 +31,15 @@ function onClick(evt){
     
     document.addEventListener('keydown', closeModal)
 
-    function closeModal(evt){
+function closeModal(evt){
     console.log(evt)
-    if (evt.key === 'Escape') {
+    
         instance.close(() => document.removeEventListener('keydown', closeModal))
-     }
+     
     }
+    
 
 }
+
+
 

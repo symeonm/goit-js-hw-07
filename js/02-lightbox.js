@@ -9,8 +9,7 @@ function createGallery(){
     
     let markup = "";
     galleryItems.forEach(elem => {
-        markup += `<li class = "gallery__item gallery__image:hover"><a class = "gallery__link" href = ${elem.original}>
-        <img class = "gallery__image" src = ${elem.preview} data-source = ${elem.original} alt = ${elem.description}></a></li>`}
+        markup += `<li class="gallery__item"><a class="gallery__link" href="${elem.original}"><img class="gallery__image" src="${elem.preview}" alt="${elem.description}"></a></li>`}
     )
     gallery.insertAdjacentHTML('afterbegin', markup)
    
@@ -18,9 +17,9 @@ function createGallery(){
 createGallery()
 
 
-    var lightbox = new SimpleLightbox('.gallery a', { 
+    const lightbox = new SimpleLightbox('.gallery a', { 
         captionsData: 'alt', 
-        captionDelay: 250
+        captionDelay: 250,
     });
 
    

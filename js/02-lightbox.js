@@ -24,14 +24,7 @@ createGallery()
     });
 
    
-    document.addEventListener('keydown', closeModal)
-
-    function closeModal(evt){
-    console.log(evt)
-    if (evt.key === 'Escape') {
-        document.removeEventListener('keydown', closeModal)
-     }
-    }
+    
 
 
 
